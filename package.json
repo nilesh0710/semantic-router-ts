@@ -1,0 +1,70 @@
+{
+    "name": "semantic-router-ts",
+    "version": "1.0.2",
+    "description": "Superfast semantic routing for LLMs and AI agents - TypeScript port of aurelio-labs/semantic-router",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "lint": "eslint src --ext .ts",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "semantic",
+        "router",
+        "llm",
+        "ai",
+        "embeddings",
+        "vector",
+        "similarity",
+        "agents",
+        "intent",
+        "classification"
+    ],
+    "author": "Nilesh",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nilesh0710/semantic-router-ts"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "@typescript-eslint/parser": "^8.0.0",
+        "eslint": "^9.0.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.7.0",
+        "vitest": "^2.0.0"
+    },
+    "peerDependencies": {
+        "@xenova/transformers": "^2.0.0",
+        "openai": ">=4.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@xenova/transformers": {
+            "optional": true
+        },
+        "openai": {
+            "optional": true
+        }
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
