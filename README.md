@@ -1,8 +1,8 @@
-# @anthropic/semantic-router
+# semantic-router-ts
 
-Superfast semantic routing for LLMs and AI agents. TypeScript port of [aurelio-labs/semantic-router](https://github.com/aurelio-labs/semantic-router).
+Superfast semantic routing for LLMs and AI agents.
 
-[![npm version](https://badge.fury.io/js/%40anthropic%2Fsemantic-router.svg)](https://www.npmjs.com/package/@anthropic/semantic-router)
+[![npm version](https://badge.fury.io/js/semantic-router-ts.svg)](https://www.npmjs.com/package/semantic-router-ts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -17,7 +17,7 @@ Superfast semantic routing for LLMs and AI agents. TypeScript port of [aurelio-l
 ## Installation
 
 ```bash
-npm install @anthropic/semantic-router
+npm install semantic-router-ts
 
 # For local/offline embeddings (recommended)
 npm install @xenova/transformers
@@ -29,7 +29,7 @@ npm install openai
 ## Quick Start
 
 ```typescript
-import { SemanticRouter, Route, LocalEncoder } from '@anthropic/semantic-router';
+import { SemanticRouter, Route, LocalEncoder } from 'semantic-router-ts';
 
 // Define your routes
 const routes: Route[] = [
@@ -74,7 +74,7 @@ console.log(noMatch.name);      // null
 Uses [Transformers.js](https://huggingface.co/docs/transformers.js) for fully offline embeddings:
 
 ```typescript
-import { LocalEncoder } from '@anthropic/semantic-router';
+import { LocalEncoder } from 'semantic-router-ts';
 
 const encoder = new LocalEncoder({
   model: 'Xenova/all-MiniLM-L6-v2', // Default, 384 dimensions
@@ -93,7 +93,7 @@ Supported models:
 Uses OpenAI's embedding API:
 
 ```typescript
-import { OpenAIEncoder } from '@anthropic/semantic-router';
+import { OpenAIEncoder } from 'semantic-router-ts';
 
 const encoder = new OpenAIEncoder({
   apiKey: process.env.OPENAI_API_KEY,
@@ -177,10 +177,6 @@ interface RouteMatch {
   scores?: RouteScore[];  // All route scores
 }
 ```
-
-## Acknowledgments
-
-This is a TypeScript port of the excellent [semantic-router](https://github.com/aurelio-labs/semantic-router) by Aurelio Labs.
 
 ## License
 

@@ -1,7 +1,7 @@
 {
     "name": "semantic-router-ts",
-    "version": "1.0.2",
-    "description": "Superfast semantic routing for LLMs and AI agents - TypeScript port of aurelio-labs/semantic-router",
+    "version": "1.0.3",
+    "description": "Superfast semantic routing for LLMs and AI agents",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
